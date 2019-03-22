@@ -7,36 +7,58 @@
 	<style>
 		
 		a	{
-			text-decoration: none;
-			color: black;
+			text-decoration:  none;
+			color:            black;
 		}
 		
 		#SelectorPopup {
 			background-color: #DCDCDC;
-			width: 500px;
-			height: 250px;
-			border: 2px solid black;
-			text-align: center;
-			border-radius: 12px;
+			width:            500px;
+			height:           250px;
+			border:           2px solid black;
+			text-align:       center;
+			border-radius:    12px;
 		}
 		
 		#NameDisplay {
 			background-color: #B0E0E6;
-			width: 400px;
-			height: 50px;
-			border: 1px solid black;
-			border-radius: 20px;
-			display: inline-block;
+			width:            400px;
+			height:           50px;
+			border:           1px solid black;
+			border-radius:    20px;
+			display:          inline-block;
 		}
 		
 		.Button {
-			display: inline-block; 
-			width: 200px; 
+			display:          inline-block; 
+			width:            200px; 
+			height:           30px;
 			background-color: silver;
-			border: 1px solid black;
-			border-radius: 8px;
-			font-size: 20px;
+			border:           1px solid black;
+			border-radius:    8px;
+			font-size:        20px;
 		}
+		
+		select	{
+			width:            200px;
+			height:           30px;
+			border-radius:    8px;
+			background-color: silver;
+			font-size:        20px;
+			border:           1px solid black;
+		}
+	</style>
+		
+	<script>
+		function ChangeText() {
+			if (document.getElementById("p1").innerHTML == "Dexter") {
+				document.getElementById("p1").innerHTML = " ";
+			}
+			else {
+				document.getElementById("p1").innerHTML = "Dexter";
+			}
+		}
+	</script>
 	</style>
 </head>
 
@@ -44,19 +66,28 @@
 	<p>SAMPLE TEXT</p>
 	<div id="SelectorPopup">
 		<p style="font-size: 30px;"><b>Computer Science Student Selector</b></p>
-		<a href="https://www.youtube.com/watch?v=mOYZaiDZ7BM">
-			<div class="Button">
-				<b>Randomize!</b>
-			</div>
-		</a>
-		<a href="https://docs.google.com/document/d/1-FBCJxYRmhaCYqNev-KLbhKCArc6eMgq5Ljbl0sylck/edit?usp=sharing">
-			<div class="Button">
-				<b>Choose Class</b>
-			</div>
-		</a>
+		
+		<button class="Button" onclick="ChangeText(this)">
+			<b>Randomize!</b>
+		</button>
+		
+		<select id="listSelect">
+			<option value="list1">Period 1</option>
+			<option value="list2">Period 2</option>
+			<option value="list3">Period 3</option>
+			<option value="list4">Period 4</option>
+			<option value="list5">Period 5</option>
+			<option value="list6">Period 6</option>
+			<option value="list7">Period 7</option>
+			<option value="list8">Period 8</option>
+		</select>
+		
 		<br><br>
+		
 		<div id="NameDisplay">
+			<p id="p1"></p>
 		</div>
+		
 		<p>Made by: Anne Marie Powell, Nathan Jesudason and Hunter Key</p>
     </div>
 	
