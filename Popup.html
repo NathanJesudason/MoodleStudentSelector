@@ -2,8 +2,6 @@
 <html>
 <head>
 	<title>Popup Test</title>
-	<!--<script src="SelectorJavascript.js"></script>
-	<link rel="stylesheet" type="text/css" href="StyleSheets\SelectorStyle.css">-->
 	<style>
 		
 		a	{
@@ -14,16 +12,17 @@
 		#SelectorPopup {
 			background-color: #DCDCDC;
 			width:            500px;
-			height:           250px;
+			height:           265px;
 			border:           2px solid black;
 			text-align:       center;
 			border-radius:    12px;
+			display:          none;
 		}
 		
 		#NameDisplay {
 			background-color: #B0E0E6;
 			width:            400px;
-			height:           50px;
+			height:           65px;
 			border:           1px solid black;
 			border-radius:    20px;
 			display:          inline-block;
@@ -47,23 +46,39 @@
 			font-size:        20px;
 			border:           1px solid black;
 		}
+		
+		#p1		{
+			font-size:        20px;
+		}
 	</style>
 		
 	<script>
 		function ChangeText() {
-			if (document.getElementById("p1").innerHTML == "Dexter") {
-				document.getElementById("p1").innerHTML = " ";
+			if (document.getElementById("p1").innerHTML == "Dexter Carpet") {
+				document.getElementById("p1").innerHTML = "--  --";
 			}
 			else {
-				document.getElementById("p1").innerHTML = "Dexter";
+				document.getElementById("p1").innerHTML = "Dexter Carpet";
 			}
+		}
+		
+		function Hide() {
+			var x = document.getElementById("SelectorPopup");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+			document.getElementById("p1").innerHTML = " ";
 		}
 	</script>
 	</style>
 </head>
 
 <body>
-	<p>SAMPLE TEXT</p>
+	<button class="Button" onclick="Hide(this)">
+		<b>SAMPLE TEXT</b>
+	</button>
 	<div id="SelectorPopup">
 		<p style="font-size: 30px;"><b>Computer Science Student Selector</b></p>
 		
@@ -85,14 +100,15 @@
 		<br><br>
 		
 		<div id="NameDisplay">
-			<p id="p1"></p>
+			<p id="p1">--  --</p>
 		</div>
+		<br>
 		
 		<p>Made by: Anne Marie Powell, Nathan Jesudason and Hunter Key</p>
     </div>
 	
 	<div>
-
+		MORE SAMPLE TEXT
 	</div>
 
 </body>
